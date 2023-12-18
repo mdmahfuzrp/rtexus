@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* App Styles */
+:root {
+    --body_background: #F9F9F9;
+    --color_border: #FDDAD6;
+    --text_color: #2E1619;
+    --opacity_color: #8A8686;
+    --card_background: #fff;
+    --gradient_background: linear-gradient(101deg, #FF7594 -6.58%, #FF7C65 102.46%);
+    --normal_color: #03922B;
+    --slightly_higher_color: #82AB0D;
+    --small_card_background: rgba(255, 45, 45, 0.60);
+    --default_color: #384449;
+    --default_color_opacity: 0.6;
+}
+[data-theme="dark"]{
+    --body_background: linear-gradient(0deg, #150A09 0%, #150A09 100%), #2E1619;
+    --card_background: rgba(255, 255, 255, 0.10);;
+    --text_color: #D1D5DB;
+    --opacity_color: #A6A6A6;
+    --color_border: #fff;
+    --gradient_background: linear-gradient(101deg, #FF7594 -6.58%, #FF7C65 102.46%);
+    --normal_color: #D1D5DB;
+    --slightly_higher_color: #D1D5DB;
+    --small_card_background: rgba(255, 255, 255, 0.50);
+}
+*{
+    transition: all 0.3s ease;
+}
+body{
+    background: var(--body_background);
+}

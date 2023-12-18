@@ -1,0 +1,77 @@
+.dark_mode {
+  margin-top: -20px;
+  margin-left: 10px;
+}
+
+.dark_mode_label {
+  width: 60px;
+  height: 28px;
+  position: relative;
+  display: block;
+  background: #fff;
+  border-radius: 200px;
+  border: 1px solid var(--color_border);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dark_mode_label:after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: #fff;
+  border-radius: 180px;
+  transition: 0.3s;
+  opacity: 0;
+}
+.dark_mode_input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.dark_mode_input:checked + .dark_mode_label {
+    background: #fff;
+    border: 1px solid var(--color_border);
+}
+.dark_mode_input:checked + .dark_mode_label:after {
+  left: 68px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.dark_mode_label:active:after {
+  width: 30px;
+}
+
+.dark_mode_label svg {
+  position: absolute;
+  width: 22px;
+  top: -7px;
+  z-index: 100;
+  transition: 0.3s;
+}
+.dark_mode_label svg.moon {
+  left: 3px;
+  fill: #fff;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+.dark_mode_label svg.sun {
+  opacity: 0;
+  left: 5px;
+  transform: rotate(180deg);
+}
+.dark_mode_input:checked + .dark_mode_label svg.moon {
+  transform: rotate(-180deg);
+  left: 33px;
+  opacity: 0;
+  z-index: 10;
+}
+.dark_mode_input:checked + .dark_mode_label svg.sun {
+  fill: #fff;
+  transform: rotate(0deg);
+  left: 33px;
+  opacity: 1;
+  z-index: 10;
+}
