@@ -11,6 +11,7 @@ import {
   HistoryIcon,
   HomeIcon,
   NewAppointment,
+  OffMenu,
   SettingsIcon,
   UserIcon,
 } from "../../assets/icons";
@@ -74,6 +75,13 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
           open ? "block" : "hidden"
         } `}
       ></div>
+      <div
+        id="OffMenu"
+        className={`absolute ${open ? 'top-[14px] md:delay-50' : 'top-[-50px]'} left-[187px] delay-200 md:delay-0 z-[99999] cursor-pointer w-[30px] h-[30px] flex items-center justify-center rounded-full`}
+        onClick={() => setOpen(!open)}
+      >
+        <OffMenu />
+      </div>
       <motion.div
         ref={sidebarRef}
         variants={Nav_animation}
@@ -81,32 +89,34 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
         animate={open ? "open" : "closed"}
         className=" text-gray shadow-xl z-[999] 
              md:relative fixed
+             overflow-hidden
          h-screen "
         id="sidebar"
       >
-        <div className="flex items-center">
+        <div className="flex items-center h-[35px] mt-[12px]">
           {!open ? (
-            <div
-              onClick={() => setOpen(!open)}
-              className="flex items-center gap-2.5 font-medium barStyles mx-3"
-            >
-              <BarIcon />
-            </div>
+            <>
+              <div
+                onClick={() => setOpen(!open)}
+                className="hidden md:flex items-center gap-2.5 font-medium barStyles mx-3"
+              >
+                <BarIcon />
+              </div>
+              <div className="md:hidden flex items-center gap-2 font-medium mx-3">
+                <BrandLogo />
+                <h1 className="text-[24px] font-medium" id="brandLogo">
+                  <span id="">Medi</span>Doc
+                </h1>
+              </div>
+            </>
           ) : (
-            <div
-              className="flex items-center gap-2.5 font-medium mx-3"
-            >
+            <div className="flex items-center gap-2 font-medium mx-3">
               <BrandLogo />
-              <h1><span>Medi</span>Doc</h1>
+              <h1 className="text-[24px] font-medium" id="brandLogo">
+                <span id="">Medi</span>Doc
+              </h1>
             </div>
           )}
-
-          <div
-            className="absolute right-[-5px] cursor-pointer"
-            onClick={() => setOpen(!open)}
-          >
-            X
-          </div>
         </div>
 
         <div className="flex flex-col  overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100 md:h-[80%]">
@@ -169,7 +179,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
           </ul>
           {open ? (
             <motion.div
-              className="flex w-[140px] mx-auto mt-[60px]"
+              className="flex w-[150px] mx-auto mt-[60px]"
               initial={{ "--opacity": "0" }}
               animate={{ "--opacity": "1" }}
               transition={{ duration: 3 }}

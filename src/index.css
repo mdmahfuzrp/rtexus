@@ -23,6 +23,10 @@
   --bar-icon-bg: white;
   --bar-icon-color: #FF7594;
   --menu_background: white;
+  --brand_color: #384449;
+  --arrow_bg: #fff;
+  --arrow_color: #FF7594;
+  --title_color: #646F75;
 }
 [data-theme="dark"] {
   --body_background: linear-gradient(0deg, #150a09 0%, #150a09 100%), #2e1619;
@@ -42,9 +46,15 @@
   --bar-icon-bg: #FF7594;
   --bar-icon-color: #D1D5DB;
   --menu_background: #2E1619;
+  --brand_color: #fff;
+  --arrow_bg: #FF7594;
+  --arrow_color: #fff;
+  --title_color: #fff;
 }
 * {
   transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+
 }
 body {
   background: var(--body_background);
@@ -97,4 +107,25 @@ body {
 
 #sidebar{
     background-color: var(--menu_background);
+}
+
+#brandLogo{
+    color: var(--special-color);
+}
+#brandLogo span{
+    color: var(--brand_color);
+}
+
+#OffMenu{
+    background-color: var(--arrow_bg);
+    box-shadow: 0 1px 2px 1px rgba(113, 113, 113, 0.197);
+}
+
+#OffMenu svg path{
+    fill: var(--arrow_color);
+}
+
+#pageTitle{
+color: var(--title_color);
+font-weight: 500;
 }
