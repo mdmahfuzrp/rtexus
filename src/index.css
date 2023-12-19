@@ -166,3 +166,43 @@ font-weight: 500;
 #openProfile svg path{
     fill: var(--brand_color);
 }
+
+
+.animatedButton {
+    position: absolute;
+    top: 2.5px;
+    left: 17.5;
+    z-index: -1;
+    border: none;
+    outline: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: block;
+    background-color: #e73212;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fff;
+
+    animation-name: ripple;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
+    }
+
+    80% {
+        box-shadow: 0 0 0 10px #fff0, 0 0 0 15px #fff0;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 #fff0, 0 0 0 0 #fff0;
+    }
+}

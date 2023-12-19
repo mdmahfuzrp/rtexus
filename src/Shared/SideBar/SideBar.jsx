@@ -185,14 +185,12 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
               </Link>
             </motion.div>
           ) : (
-            <motion.div
-              animate={open ? "opacity-100" : "opacity-0"}
-              className={`new-appointment  mt-[60px] ${
-                open ? "opacity-0" : "opacity-100"
-              } duration-300 transition-opacity`}
+            <div
+              className="relative cursor-pointer flex items-center justify-center w-full"
             >
               <NewAppointment />
-            </motion.div>
+              <div className="animatedButton"></div>
+            </div>
           )}
         </div>
       </motion.div>
