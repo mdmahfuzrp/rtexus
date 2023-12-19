@@ -6,33 +6,37 @@ import { useEffect, useState } from "react";
 const Navbar = ({ open, setOpen }) => {
   const [scrolled, setScrolled] = useState(false);
 
-
+//   Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
-      const mainPageContent = document.getElementById('mainPageContent');
+      const mainPageContent = document.getElementById("mainPageContent");
       if (mainPageContent.scrollTop > 25) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     };
-  
-    const mainPageContent = document.getElementById('mainPageContent');
+
+    const mainPageContent = document.getElementById("mainPageContent");
     if (mainPageContent) {
       mainPageContent.addEventListener("scroll", handleScroll);
     }
-  
+
     return () => {
       if (mainPageContent) {
         mainPageContent.removeEventListener("scroll", handleScroll);
       }
     };
   }, [setScrolled]);
+
   return (
     <div
       id="navbar"
-      className={`w-full flex sticky top-0 items-center justify-between md:py-[12px] px-5 ${scrolled ? 'scrolled' : ''}`}
+      className={`w-full flex sticky top-0 items-center justify-between md:py-[12px] px-5 ${
+        scrolled ? "scrolled" : ""
+      }`}
     >
+      {/* Open Menu Button */}
       <div className="flex items-center justify-start">
         <div
           onClick={() => setOpen(!open)}
@@ -40,17 +44,22 @@ const Navbar = ({ open, setOpen }) => {
         >
           <BarIcon />
         </div>
-        <h1 className={`text-[20px] mt-[1px] ${scrolled ? '!text-white' : ''}`} id="pageTitle">
+        <h1
+          className={`text-[20px] mt-[1px] ${scrolled ? "!text-white" : ""}`}
+          id="pageTitle"
+        >
           Home
         </h1>
       </div>
+
+      {/* Dark Mode and User Profile */}
       <div className="flex items-center gap-4 mt-[]">
         <DarkMode />
         <div className="flex items-center gap-2">
           <img
             src={UserImg}
             alt=""
-            className="w-[30px] mb-[-3px] border rounded-full"
+            className="w-[35px] h-[35px] mb-[-3px] border-2 rounded-full"
             id="userIcon"
           />
           <div

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* App Styles */
+/* Light Mode Styles */
 :root {
   --body_background: #f9f9f9;
   --color_border: #fddad6;
@@ -21,13 +21,15 @@
   --default_color_opacity: 0.6;
   --special-color: #ff7594;
   --bar-icon-bg: white;
-  --bar-icon-color: #FF7594;
+  --bar-icon-color: #ff7594;
   --menu_background: white;
   --brand_color: #384449;
   --arrow_bg: #fff;
-  --arrow_color: #FF7594;
-  --title_color: #646F75;
+  --arrow_color: #ff7594;
+  --title_color: #646f75;
 }
+
+/* Dark Mode Styles */
 [data-theme="dark"] {
   --body_background: linear-gradient(0deg, #150a09 0%, #150a09 100%), #2e1619;
   --card_background: rgba(255, 255, 255, 0.1);
@@ -43,38 +45,38 @@
   --slightly_higher_color: #d1d5db;
   --small_card_background: rgba(255, 255, 255, 0.5);
   --special-color: #ff7594;
-  --bar-icon-bg: #FF7594;
+  --bar-icon-bg: #ff7594;
   --bar-icon-color: #fff;
-  --menu_background: #2E1619;
+  --menu_background: #2e1619;
   --brand_color: #fff;
-  --arrow_bg: #FF7594;
+  --arrow_bg: #ff7594;
   --arrow_color: #fff;
   --title_color: #fff;
 }
 
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
-    width: 9px;
-    height: 8px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #ff75932f;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--gradient_background);
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #d6798d;
-  }
+  width: 9px;
+  height: 8px;
+}
 
-  /* Default Styles */
+::-webkit-scrollbar-track {
+  background-color: #ff75932f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient_background);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d6798d;
+}
+
+/* Default Styles */
 * {
   transition: all 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--text_color);
 }
 
@@ -83,15 +85,19 @@ body {
   background: var(--body_background);
 }
 
+/* Sidebar Styles */
+#sidebar {
+  background-color: var(--menu_background);
+}
 
-/* Others Styles */
+/* Sidebar Icons Styles */
 .iconStyles svg {
   fill: var(--text_color) !important;
   transition: none !important;
 }
-.barStyles{
-    width: 37px;
-    margin: 0 auto;
+.barStyles {
+  width: 37px;
+  margin: 0 auto;
 }
 .barStyles:hover {
   cursor: pointer;
@@ -130,79 +136,77 @@ body {
   fill: var(--special-color) !important;
 }
 
-
-#sidebar{
-    background-color: var(--menu_background);
+/* Brand Name On Sidebar Styles */
+#brandLogo {
+  color: var(--special-color);
+}
+#brandLogo span {
+  color: var(--brand_color);
 }
 
-#brandLogo{
-    color: var(--special-color);
-}
-#brandLogo span{
-    color: var(--brand_color);
-}
-
-#OffMenu{
-    background-color: var(--arrow_bg);
-    box-shadow: 0 1px 2px 1px rgba(113, 113, 113, 0.197);
+/* Menu Open Close Arrow Styles */
+#OffMenu {
+  background-color: var(--arrow_bg);
+  box-shadow: 0 1px 2px 1px rgba(113, 113, 113, 0.197);
 }
 
-#OffMenu svg path{
-    fill: var(--arrow_color);
+#OffMenu svg path {
+  fill: var(--arrow_color);
 }
 
-#pageTitle{
-color: var(--title_color);
-font-weight: 500;
+/* Navbar Styles */
+#pageTitle {
+  color: var(--title_color);
+  font-weight: 500;
 }
 
-#userIcon{
-    border-color: var(--special-color);
-    object-fit: cover;
+#userIcon {
+  border-color: var(--special-color);
+  object-fit: cover;
 }
-.scrolled{
-    background: var(--gradient_background);
+.scrolled {
+  background: var(--gradient_background);
 }
-#openProfile svg path{
-    fill: var(--brand_color);
+#openProfile svg path {
+  fill: var(--brand_color);
 }
 
-
+/* New Appointment Button */
 .animatedButton {
-    position: absolute;
-    top: 2.5px;
-    left: 17.5;
-    z-index: -1;
-    border: none;
-    outline: none;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: block;
-    background-color: #e73212;
-    color: #fff;
-    display: grid;
-    place-items: center;
-    font-size: 18px;
-    cursor: pointer;
-    border: 2px solid #fff;
+  position: absolute;
+  top: 2.5px;
+  left: 17.5;
+  z-index: -1;
+  border: none;
+  outline: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: block;
+  background-color: #e73212;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid #fff;
 
-    animation-name: ripple;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+  animation-name: ripple;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 
-
+/* Appointment Animation Keyframes */
 @keyframes ripple {
-    0% {
-        box-shadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
-    }
+  0% {
+    box-shadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
+  }
 
-    80% {
-        box-shadow: 0 0 0 10px #fff0, 0 0 0 15px #fff0;
-    }
+  80% {
+    box-shadow: 0 0 0 10px #fff0, 0 0 0 15px #fff0;
+  }
 
-    100% {
-        box-shadow: 0 0 0 0 #fff0, 0 0 0 0 #fff0;
-    }
+  100% {
+    box-shadow: 0 0 0 0 #fff0, 0 0 0 0 #fff0;
+  }
 }

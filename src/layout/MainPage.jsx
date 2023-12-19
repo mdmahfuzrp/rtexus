@@ -6,11 +6,13 @@ import { useState } from "react";
 import { OffMenu } from "../assets/icons";
 
 const MainPage = () => {
+  // Responsive Sidebar Functionality
   let isTabletMid = useMediaQuery({ query: "(max-width: 833px)" });
   const [open, setOpen] = useState(isTabletMid ? false : true);
 
   return (
     <div className="flex max-h-screen overflow-hidden overflow-y-hidden">
+      {/* Sidebar Component */}
       <div>
         <div
           id="OffMenu"
@@ -29,7 +31,10 @@ const MainPage = () => {
         className="w-full md:max-w-[1300px] overflow-x-hidden lg:max-w-[1600px] h-screen overflow-y-auto"
         id="mainPageContent"
       >
+        {/* Navbar Component Imported */}
         <Navbar isTabletMid={isTabletMid} open={open} setOpen={setOpen} />
+
+        {/* Main Pages - All Children or Outlets */}
         <main className="px-[21px]">
           <Outlet />
         </main>

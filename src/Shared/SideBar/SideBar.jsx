@@ -86,6 +86,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
          h-screen "
         id="sidebar"
       >
+        {/* Hamburger and Logo Switch Logic */}
         <div className="flex items-center h-[35px] mt-[12px] mb-6">
           {!open ? (
             <>
@@ -113,6 +114,8 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
         </div>
 
         <div className="flex flex-col overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100 md:h-[80%]">
+
+          {/* Sidebar Items */}
           <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-7 font-medium ">
             <li className="no-underline">
               <NavLink
@@ -170,6 +173,9 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
               </NavLink>
             </li>
           </ul>
+          
+          
+          {/* New Appointment Section */}
           {open ? (
             <motion.div
               className="flex w-[150px] mx-auto mt-[60px]"
