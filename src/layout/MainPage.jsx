@@ -3,18 +3,36 @@ import Sidebar from "../Shared/SideBar/SideBar";
 import Navbar from "../Shared/Navbar";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
+import { OffMenu } from "../assets/icons";
 
 const MainPage = () => {
-    
   let isTabletMid = useMediaQuery({ query: "(max-width: 833px)" });
   const [open, setOpen] = useState(isTabletMid ? false : true);
 
   return (
-    <div className="flex gap-5 max-h-screen overflow-hidden overflow-y-hidden">
-    <Sidebar isTabletMid={isTabletMid} open={open} setOpen={setOpen} />
-      <div className="w-full md:max-w-[1300px] pr-3 overflow-x-hidden lg:max-w-[1600px] h-screen overflow-y-auto" id="mainPageContent">
+    <div className="flex max-h-screen overflow-hidden overflow-y-hidden">
+      <div>
+        <div
+          id="OffMenu"
+          className={`absolute ${
+            open ? "top-[14px] md:delay-50" : "top-[-50px]"
+          } left-[187px] delay-200 md:delay-0 z-[99999] cursor-pointer w-[30px] h-[30px] flex items-center justify-center rounded-full`}
+          onClick={() => setOpen(!open)}
+        >
+          <OffMenu />
+        </div>
+
+        <Sidebar isTabletMid={isTabletMid} open={open} setOpen={setOpen} />
+      </div>
+
+      <div
+        className="w-full md:max-w-[1300px] overflow-x-hidden lg:max-w-[1600px] h-screen overflow-y-auto"
+        id="mainPageContent"
+      >
         <Navbar isTabletMid={isTabletMid} open={open} setOpen={setOpen} />
-        <main className=""><Outlet /></main>
+        <main className="px-[21px]">
+          <Outlet />
+        </main>
       </div>
     </div>
   );

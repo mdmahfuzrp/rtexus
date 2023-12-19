@@ -75,13 +75,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
           open ? "block" : "hidden"
         } `}
       ></div>
-      <div
-        id="OffMenu"
-        className={`absolute ${open ? 'top-[14px] md:delay-50' : 'top-[-50px]'} left-[187px] delay-200 md:delay-0 z-[99999] cursor-pointer w-[30px] h-[30px] flex items-center justify-center rounded-full`}
-        onClick={() => setOpen(!open)}
-      >
-        <OffMenu />
-      </div>
+      
       <motion.div
         ref={sidebarRef}
         variants={Nav_animation}

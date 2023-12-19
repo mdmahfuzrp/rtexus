@@ -129,3 +129,14 @@ body {
 color: var(--title_color);
 font-weight: 500;
 }
+
+#userIcon{
+    border-color: var(--special-color);
+    object-fit: cover;
+}
+.scrolled{
+    background: var(--gradient_background);
+}
+#openProfile svg path{
+    fill: var(--brand_color);
+}
