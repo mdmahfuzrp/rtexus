@@ -14,6 +14,8 @@ const DarkMode = () => {
     const selectedTheme = localStorage.getItem("selectedTheme");
     if(selectedTheme === "dark"){
         setDarkMode();
+    }else{
+        setLightMode();
     }
     const toggleTheme = (e) =>{
         if(e.target.checked) setDarkMode();
