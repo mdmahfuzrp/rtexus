@@ -44,7 +44,7 @@
   --small_card_background: rgba(255, 255, 255, 0.5);
   --special-color: #ff7594;
   --bar-icon-bg: #FF7594;
-  --bar-icon-color: #D1D5DB;
+  --bar-icon-color: #fff;
   --menu_background: #2E1619;
   --brand_color: #fff;
   --arrow_bg: #FF7594;
@@ -70,14 +70,21 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #d6798d;
   }
+
+  /* Default Styles */
 * {
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
-
+  color: var(--text_color);
 }
+
+/* Body */
 body {
   background: var(--body_background);
 }
+
+
+/* Others Styles */
 .iconStyles svg {
   fill: var(--text_color) !important;
   transition: none !important;

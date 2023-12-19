@@ -31,7 +31,7 @@ const Navbar = ({ open, setOpen }) => {
   return (
     <div
       id="navbar"
-      className={`w-full flex sticky top-0 items-center justify-between md:py-[13px] px-5 ${scrolled ? 'scrolled' : ''}`}
+      className={`w-full flex sticky top-0 items-center justify-between md:py-[12px] px-5 ${scrolled ? 'scrolled' : ''}`}
     >
       <div className="flex items-center justify-start">
         <div
@@ -40,11 +40,11 @@ const Navbar = ({ open, setOpen }) => {
         >
           <BarIcon />
         </div>
-        <h1 className={`text-[20px] mt-[-2px] ${scrolled ? '!text-white' : ''}`} id="pageTitle">
+        <h1 className={`text-[20px] mt-[1px] ${scrolled ? '!text-white' : ''}`} id="pageTitle">
           Home
         </h1>
       </div>
-      <div className="flex items-center gap-4 mt-[-4px]">
+      <div className="flex items-center gap-4 mt-[]">
         <DarkMode />
         <div className="flex items-center gap-2">
           <img

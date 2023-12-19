@@ -11,7 +11,6 @@ import {
   HistoryIcon,
   HomeIcon,
   NewAppointment,
-  OffMenu,
   SettingsIcon,
   UserIcon,
 } from "../../assets/icons";
@@ -87,7 +86,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
          h-screen "
         id="sidebar"
       >
-        <div className="flex items-center h-[35px] mt-[12px]">
+        <div className="flex items-center h-[35px] mt-[12px] mb-6">
           {!open ? (
             <>
               <div
@@ -113,12 +112,12 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
           )}
         </div>
 
-        <div className="flex flex-col  overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100 md:h-[80%]">
-          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1  font-medium ">
+        <div className="flex flex-col overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100 md:h-[80%]">
+          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-7 font-medium ">
             <li className="no-underline">
               <NavLink
                 to={"/"}
-                className="flex special-icon items-center no-underline p-2 pl-[6px] rounded-md"
+                className="flex special-icon text-base items-center no-underline pl-[6px] rounded-md"
               >
                 <span className="mr-[15px] iconStyles special">
                   <HomeIcon />
@@ -129,9 +128,9 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
             <li>
               <NavLink
                 to={"/products"}
-                className="flex special items-center no-underline p-2 pl-[6px] rounded-md"
+                className="flex special items-center text-base no-underline pl-[6px] rounded-md"
               >
-                <span className="mr-[15px] iconStyles-path">
+                <span className="mr-[16px] iconStyles-path">
                   <UserIcon className="min-w-max pr-1 mr-4" />
                 </span>
                 Patient Profile
@@ -140,7 +139,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
             <li>
               <NavLink
                 to={"/orders"}
-                className="flex special items-center no-underline p-2 pl-[6px] rounded-md"
+                className="flex special items-center text-base no-underline pl-[6px] rounded-md"
               >
                 <span className="mr-[15px] iconStyles-path">
                   <CalenderIcon className="min-w-max pr-1 mr-4" />
@@ -151,7 +150,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
             <li>
               <NavLink
                 to={"/reports"}
-                className="flex special items-center no-underline p-2 pl-[6px] rounded-md"
+                className="flex special items-center text-base no-underline  pl-[6px] rounded-md"
               >
                 <span className="mr-[15px] iconStyles">
                   <HistoryIcon className="min-w-max pr-1 mr-4" />
@@ -162,7 +161,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
             <li>
               <NavLink
                 to={"/customers"}
-                className="flex special items-center no-underline p-2 pl-[6px] rounded-md"
+                className="flex special items-center text-base font-medium no-underline pl-[6px] rounded-md"
               >
                 <span className="mr-[15px] iconStyles-path">
                   <SettingsIcon className="min-w-max pr-1 mr-4 " />
