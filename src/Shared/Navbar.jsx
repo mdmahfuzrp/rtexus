@@ -40,7 +40,7 @@ const Navbar = ({ open, setOpen }) => {
         >
           <BarIcon />
         </div>
-        <h1 className="text-[20px] mt-[-2px]" id="pageTitle">
+        <h1 className={`text-[20px] mt-[-2px] ${scrolled ? '!text-white' : ''}`} id="pageTitle">
           Home
         </h1>
       </div>

@@ -51,6 +51,25 @@
   --arrow_color: #fff;
   --title_color: #fff;
 }
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 9px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #ff75932f;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gradient_background);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d6798d;
+  }
 * {
   transition: all 0.3s ease;
   font-family: 'Poppins', sans-serif;
