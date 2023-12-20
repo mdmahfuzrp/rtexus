@@ -178,7 +178,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
           {/* New Appointment Section */}
           {open ? (
             <motion.div
-              className="flex w-[150px] mx-auto mt-[60px]"
+              className="flex w-[150px] mx-auto mt-[30px] md:mt-[60px]"
               initial={{ "--opacity": "0" }}
               animate={{ "--opacity": "1" }}
               transition={{ duration: 3 }}
@@ -192,7 +192,7 @@ const Sidebar = ({ isTabletMid, open, setOpen }) => {
             </motion.div>
           ) : (
             <div
-              className="relative cursor-pointer flex items-center justify-center w-full"
+              className="relative  mt-[30px] md:mt-[60px] cursor-pointer flex items-center justify-center w-full"
             >
               <NewAppointment />
               <div className="animatedButton"></div>
