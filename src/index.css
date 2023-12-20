@@ -6,6 +6,7 @@
 :root {
   --body_background: #f9f9f9;
   --color_border: #fddad6;
+  --upcoming: #FFF5F5;
   --text_color: #2e1619;
   --opacity_color: #8a8686;
   --card_background: #fff;
@@ -27,15 +28,19 @@
   --arrow_bg: #fff;
   --arrow_color: #ff7594;
   --title_color: #646f75;
+  --card_shadow: 0px 3.174px 3.967px 0px rgba(0, 0, 0, 0.20);
+  --second_text_color: #4A3D3F;
+  --doctor_color: #384449;
 }
 
 /* Dark Mode Styles */
 [data-theme="dark"] {
   --body_background: linear-gradient(0deg, #150a09 0%, #150a09 100%), #2e1619;
-  --card_background: rgba(255, 255, 255, 0.1);
+  --card_background: rgba(255, 255, 255, 0.10);
   --text_color: #d1d5db;
+  --upcoming: rgba(255, 255, 255, 0.10);
   --opacity_color: #a6a6a6;
-  --color_border: #fff;
+  --color_border: #d1d5db91;
   --gradient_background: linear-gradient(
     101deg,
     #ff7594 -6.58%,
@@ -52,6 +57,9 @@
   --arrow_bg: #ff7594;
   --arrow_color: #fff;
   --title_color: #fff;
+  --card_shadow: 0px 3.174px 3.967px 0px rgba(0, 0, 0, 0.20);
+  --second_text_color: #d1d5db;
+  --doctor_color: #fff;
 }
 
 /* Scrollbar Styles */
@@ -194,6 +202,61 @@ body {
   animation-name: ripple;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+}
+
+/* Dashboard Page Styles */
+#welcomeText{
+  background: var(--gradient_background);
+  border-radius: 8px;
+  padding: 0 16px;
+}
+/* Tools Result Styles */
+.tools{
+  background: var(--card_background);
+  box-shadow: var(--card_shadow);
+  text-align: left;
+}
+.toolsIcon svg{
+  fill: var(--small_card_background);
+}
+.toolsIcon3 svg rect{
+  fill: var(--small_card_background);
+}
+.toolsIcon4 svg rect{
+  fill: var(--small_card_background);
+}
+.toolsName{
+  color: var(--text_color);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.toolsResult, .toolsResult span{
+  color: var(--second_text_color);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.resultTypeArrow svg path{
+  fill: var(--text_color);
+}
+.resultNormal{
+  color: var(--normal_color);
+}
+.resultSlightly{
+  color: var(--slightly_higher_color);
+}
+
+/* Upcoming Appointments */
+.upcomingAppointment{
+  background: var(--card_background);
+}
+.doctorName, .doctorCategory{
+  color: var(--doctor_color);
+}
+.upcoming{
+  background: var(--upcoming);
+  border: 1px solid var(--color_border);
 }
 
 /* Appointment Animation Keyframes */

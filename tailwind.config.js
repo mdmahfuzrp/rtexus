@@ -8,6 +8,8 @@ export default {
 
         md: "834px",
 
+        laptop: "1300px",
+
         lg: "1512px",
       },
     },
