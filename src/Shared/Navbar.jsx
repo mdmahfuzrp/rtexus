@@ -4,35 +4,37 @@ import UserImg from "../assets/Avatar.png";
 import { useEffect, useState } from "react";
 
 const Navbar = ({ open, setOpen }) => {
+
+  // Here are scroll effect
   const [scrolled, setScrolled] = useState(false);
 
-//   Scroll Effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const mainPageContent = document.getElementById("mainPageContent");
-      if (mainPageContent.scrollTop > 25) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+// //   Scroll Effect
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const mainPageContent = document.getElementById("mainPageContent");
+//       if (mainPageContent.scrollTop > 25) {
+//         setScrolled(true);
+//       } else {
+//         setScrolled(false);
+//       }
+//     };
 
-    const mainPageContent = document.getElementById("mainPageContent");
-    if (mainPageContent) {
-      mainPageContent.addEventListener("scroll", handleScroll);
-    }
+//     const mainPageContent = document.getElementById("mainPageContent");
+//     if (mainPageContent) {
+//       mainPageContent.addEventListener("scroll", handleScroll);
+//     }
 
-    return () => {
-      if (mainPageContent) {
-        mainPageContent.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [setScrolled]);
+//     return () => {
+//       if (mainPageContent) {
+//         mainPageContent.removeEventListener("scroll", handleScroll);
+//       }
+//     };
+//   }, [setScrolled]);
 
   return (
     <div
       id="navbar"
-      className={`w-full flex z-[99999999] sticky top-0 items-center justify-between md:py-[12px] px-5 ${
+      className={`w-full flex z-[99999999] items-center justify-between md:py-[12px] px-5 ${
         scrolled ? "scrolled" : ""
       }`}
     >
