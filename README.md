@@ -1,8 +1,31 @@
-# React + Vite
+# READ THIS CAREFULLY BEFORE START YOUR PROJECT IN LOCALLY!!
+# [rtexus-frontend-task-live](https://rtexus-frontend-task.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### All right reserved - [Md Mahfuz RP](https://mahfuzrp.netlify.app)
 
-Currently, two official plugins are available:
+## Installation for First Time
+1. Clone this repository:
+```sh
+git clone https://github.com/mdmahfuzrp/rtexus-frontend-task.git
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Install Package
+3. Install related package
+```sh
+npm install or npm i
+```
+
+## Live Preview
+4. Run this command to see live site
+
+```sh
+npm run dev
+```
+
+## CONTACT WITH ME:
+### Md Mahfuz RP
+<div align="left">
+<a href="https://fb.com/mdmahfuzrp" target="blank"><img align="center" src="https://i.ibb.co/6bbvqCG/facebook-256x256.png" alt="mdmahfuzrp" height="30" width="30" /></a>
+<a href="https://instagram.com/mdmahfuzrp" target="blank"><img align="center" src="https://i.ibb.co/tX0CDxd/instagram-256x256.png" alt="mdmahfuzrp" height="30" width="30" /></a>
+<a href="https://twitter.com/mdmahfuzrp" target="blank"><img align="center" src="https://i.ibb.co/9VDdfFG/twitter-256x256.png" height="30" width="30" /></a>
+<a href="https://www.linkedin.com/in/mdmahfuzrp" target="blank"><img align="center" src="https://i.ibb.co/FgZy8DM/linkedin-original-256x256.png" height="30" width="30" /></a>

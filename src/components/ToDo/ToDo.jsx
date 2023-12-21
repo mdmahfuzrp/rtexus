@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AddNewToDoIcon, CheckIcon } from "../../assets/icons";
+import { CheckIcon } from "../../assets/icons";
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
