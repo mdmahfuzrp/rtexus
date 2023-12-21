@@ -416,6 +416,41 @@ export const PulseCount = () =>{
   )
 }
 
+export const AddNewToDoIcon = () =>{
+  return(
+    <svg width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1_2844)">
+<rect x="2" y="1" width="24.566" height="24.566" rx="12.283" fill="url(#paint0_linear_1_2844)" shape-rendering="crispEdges"/>
+<path d="M14.3821 13.184V9.71698H13.3915V13.184H9.92456V14.1745H13.3915V17.6415H14.3821V14.1745H17.8491V13.184H14.3821Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_1_2844" x="0.415094" y="0.207547" width="27.7357" height="27.7359" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.792453"/>
+<feGaussianBlur stdDeviation="0.792453"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2844"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2844" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_1_2844" x1="5.90454" y1="-28.8701" x2="38.7876" y2="-22.3203" gradientUnits="userSpaceOnUse">
+<stop offset="0.00315941" stop-color="#FF7594"/>
+<stop offset="0.942708" stop-color="#FF7C65"/>
+</linearGradient>
+</defs>
+</svg>
+
+  )
+}
+export const CheckIcon = () =>{
+  return(
+    <svg width="15" height="15" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75356 10.5C5.59256 10.5 5.43856 10.4335 5.32831 10.3163L2.49156 7.29521C2.27047 7.06071 2.28272 6.69146 2.51722 6.47096C2.75231 6.25046 3.12156 6.26213 3.34147 6.49663L5.74773 9.05804L10.6524 3.69021C10.8706 3.45163 11.2392 3.43588 11.4772 3.65288C11.7146 3.86988 11.731 4.23913 11.514 4.47655L6.18406 10.3099C6.07498 10.43 5.91981 10.4989 5.75764 10.5H5.75356Z" fill="#FBFBFB"/>
+</svg>
+
+  )
+}
 export const BloodPressure = () =>{
   return(
     <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">

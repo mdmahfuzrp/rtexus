@@ -32,7 +32,7 @@ const Navbar = ({ open, setOpen }) => {
   return (
     <div
       id="navbar"
-      className={`w-full flex sticky top-0 items-center justify-between md:py-[12px] px-5 ${
+      className={`w-full flex z-[99999999] sticky top-0 items-center justify-between md:py-[12px] px-5 ${
         scrolled ? "scrolled" : ""
       }`}
     >

@@ -35,7 +35,7 @@ const MainPage = () => {
         <Navbar isTabletMid={isTabletMid} open={open} setOpen={setOpen} />
 
         {/* Main Pages - All Children or Outlets */}
-        <main className="px-[21px]">
+        <main id="mainOutlet" className="px-[21px]">
           <Outlet />
         </main>
       </div>

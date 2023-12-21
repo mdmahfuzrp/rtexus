@@ -8,11 +8,12 @@ export default {
 
         md: "834px",
 
+        medium: "1200px",
         laptop: "1300px",
 
         lg: "1512px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

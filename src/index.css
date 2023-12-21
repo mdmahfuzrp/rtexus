@@ -6,7 +6,7 @@
 :root {
   --body_background: #f9f9f9;
   --color_border: #fddad6;
-  --upcoming: #FFF5F5;
+  --upcoming: #fff5f5;
   --text_color: #2e1619;
   --opacity_color: #8a8686;
   --card_background: #fff;
@@ -28,17 +28,24 @@
   --arrow_bg: #fff;
   --arrow_color: #ff7594;
   --title_color: #646f75;
-  --card_shadow: 0px 3.174px 3.967px 0px rgba(0, 0, 0, 0.20);
-  --second_text_color: #4A3D3F;
+  --card_shadow: 0px 3.174px 3.967px 0px rgba(0, 0, 0, 0.2);
+  --second_text_color: #4a3d3f;
   --doctor_color: #384449;
+  --border_special: #d1d5db91;
+  --todo_input_field: #fff;
+  --low_gray: #e0e0e0;
+  --checkbox_default: #edebeb;
+  --fullboxshadow: 0 0 0 0 rgba(237, 129, 129, 0), 0 0 0 0 #fff0;
+  --midboxshadow: 0 0 0 10px rgba(238, 31, 31, 0), 0 0 0 15px rgba(234, 17, 17, 0);
+  --smallboxshadow: 0 0 0 0 rgba(244, 153, 153, 0.709), 0 0 0 0 rgba(248, 152, 152, 0.685);
 }
 
 /* Dark Mode Styles */
 [data-theme="dark"] {
   --body_background: linear-gradient(0deg, #150a09 0%, #150a09 100%), #2e1619;
-  --card_background: rgba(255, 255, 255, 0.10);
+  --card_background: rgba(255, 255, 255, 0.1);
   --text_color: #d1d5db;
-  --upcoming: rgba(255, 255, 255, 0.10);
+  --upcoming: rgba(255, 255, 255, 0.1);
   --opacity_color: #a6a6a6;
   --color_border: #d1d5db91;
   --gradient_background: linear-gradient(
@@ -57,9 +64,17 @@
   --arrow_bg: #ff7594;
   --arrow_color: #fff;
   --title_color: #fff;
-  --card_shadow: 0px 3.174px 3.967px 0px rgba(0, 0, 0, 0.20);
+  --card_shadow: 0px 3.174px 3.967px 0px rgba(0, 0, 0, 0.2);
   --second_text_color: #d1d5db;
   --doctor_color: #fff;
+  --border_special: transparent;
+  --todo_input_field: rgba(255, 255, 255, 0.1);
+  --low_gray: #a6a6a6;
+  --checkbox_default: #d1d5db;
+  --fullboxshadow: 0 0 0 0 rgba(218, 16, 16, 0), 0 0 0 0 #fff0;
+  --midboxshadow: 0 0 0 10px rgba(238, 31, 31, 0),
+    0 0 0 15px rgba(234, 17, 17, 0);
+  --smallboxshadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
 }
 
 /* Scrollbar Styles */
@@ -69,7 +84,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #ff75932f;
+  background: var(--body_background);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -90,7 +105,7 @@
 
 /* Body */
 body {
-  background: var(--body_background);
+  background: var(--body_background) !important;
 }
 
 /* Sidebar Styles */
@@ -174,6 +189,7 @@ body {
 }
 .scrolled {
   background: var(--gradient_background);
+  box-shadow: 0 0 15px 2px #2e161913;
 }
 #openProfile svg path {
   fill: var(--brand_color);
@@ -205,71 +221,179 @@ body {
 }
 
 /* Dashboard Page Styles */
-#welcomeText{
+#welcomeText {
   background: var(--gradient_background);
   border-radius: 8px;
   padding: 0 16px;
 }
 /* Tools Result Styles */
-.tools{
+.tools {
   background: var(--card_background);
   box-shadow: var(--card_shadow);
   text-align: left;
 }
-.toolsIcon svg{
+.toolsIcon svg {
   fill: var(--small_card_background);
 }
-.toolsIcon3 svg rect{
+.toolsIcon3 svg rect {
   fill: var(--small_card_background);
 }
-.toolsIcon4 svg rect{
+.toolsIcon4 svg rect {
   fill: var(--small_card_background);
 }
-.toolsName{
+.toolsName {
   color: var(--text_color);
   font-size: 14px;
   font-weight: 600;
   margin-top: 10px;
 }
-.toolsResult, .toolsResult span{
+.toolsResult,
+.toolsResult span {
   color: var(--second_text_color);
   font-size: 17px;
   font-weight: 500;
   margin: 5px 0;
 }
-.resultTypeArrow svg path{
+.resultTypeArrow svg path {
   fill: var(--text_color);
 }
-.resultNormal{
+.resultNormal {
   color: var(--normal_color);
+  font-size: 14px;
 }
-.resultSlightly{
+.resultSlightly {
   color: var(--slightly_higher_color);
+  font-size: 14px;
 }
 
 /* Upcoming Appointments */
-.upcomingAppointment{
+.upcomingAppointment {
   background: var(--card_background);
+  border-color: var(--border_special);
 }
-.doctorName, .doctorCategory{
+.doctorName,
+.doctorCategory {
   color: var(--doctor_color);
 }
-.upcoming{
+.upcoming {
   background: var(--upcoming);
   border: 1px solid var(--color_border);
+}
+
+/* todoList */
+.todoList {
+  background: var(--card_background);
+  border-color: var(--border_special);
+}
+.addTodoBtn svg {
+  width: 23px;
+  fill: #ff7594;
+}
+.addButton {
+  background: var(--gradient_background);
+  color: #fbfbfb;
+  font-size: 14px;
+  padding: 5px 12px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+.todoInputField {
+  background: var(--todo_input_field);
+  border: 1px solid var(--border_special);
+}
+.add_date {
+  color: var(--low_gray);
+}
+.checkbox {
+  width: 17px;
+  height: 17px;
+  border-radius: 3px;
+  border-color: var(--special-color);
+}
+input[type="checkbox"]:not(:checked) {
+  /* Explicit Unchecked Styles */
+  border-color: var(--checkbox_default);
+  color: blue !important;
+}
+input[type="checkbox"]:checked {
+  font-weight: 900;
+  border-color: var(--special-color);
+  color: white;
+}
+
+/* covidUpdates */
+.covidUpdates {
+  background: var(--card_background);
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid var(--border_special);
+}
+.covidTime {
+  color: var(--opacity_color);
+}
+.covidReport {
+  background: var(--gradient_background);
+}
+.covidTitle {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.covidNumber {
+  color: white;
+  font-size: 35px;
+  font-weight: 500;
 }
 
 /* Appointment Animation Keyframes */
 @keyframes ripple {
   0% {
-    box-shadow: 0 0 0 0 #fff4, 0 0 0 0 #fff4;
+    box-shadow: var(--smallboxshadow);
   }
 
   80% {
-    box-shadow: 0 0 0 10px #fff0, 0 0 0 15px #fff0;
+    box-shadow: var(--midboxshadow);
   }
 
   100% {
-    box-shadow: 0 0 0 0 #fff0, 0 0 0 0 #fff0;
+    box-shadow: var(--fullboxshadow);
+  }
+}
+
+/* MEdia Query */
+@media only screen and (max-width: 834px) {
+  .div2,
+  .div3,
+  .div4,
+  .div5 {
+    padding: 0 20px;
+  }
+  .div2 {
+    padding-top: 20px;
+  }
+  .div5 {
+    padding: 0 20px;
+  }
+  #navbar {
+    background: var(--gradient_background);
+  }
+  #navbar #pageTitle {
+    color: white;
+  }
+  #mainOutlet {
+    padding: 0;
+  }
+  #welcomeText {
+    flex-direction: column;
+    padding: 0 20px 30px 20px;
+    align-items: start;
+    gap: 0;
+    border-radius: 0;
+    margin-top: -10px;
+  }
+  #welcomeText img {
+    width: fit-content;
+    margin: 0 auto;
   }
 }
