@@ -28,7 +28,7 @@ const MainPage = () => {
       </div>
 
       <div
-        className="w-full md:max-w-[1300px] overflow-x-hidden lg:max-w-[1600px] h-screen overflow-y-auto"
+        className="w-full md:max-w-[1300px] mx-auto overflow-x-hidden lg:max-w-[1600px] h-screen overflow-y-auto"
         id="mainPageContent"
       >
         {/* Navbar Component Imported */}
